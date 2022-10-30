@@ -44,4 +44,27 @@ namespace ILSafe.SDK
             _type = type.ToList();
         }
     }
+    
+    public class LazyImporter
+    {
+        public extern object LazyImport(Func<string, dynamic> _obj, params object[] _args);
+
+        public extern object LazyImport(Func<Object, dynamic> _obj, params object[] _args);
+
+        public extern object LazyImport(Func<string> _obj, params object[] _args);
+
+        public extern object LazyImport(Func<dynamic> _obj, params object[] _args);
+
+        //public extern object LazyImport(Func<Object> _obj, params object[] _args);
+
+        public extern object LazyImportA(Action _obj, params object[] _args);
+
+        public extern object LazyImportA(Action<dynamic> _obj, params object[] _args);
+
+        //public extern object LazyImportA(Action<object> _obj, params object[] _args);
+
+        public extern object LazyImportA(Action<Object, dynamic> _obj, params object[] _args);
+
+        public extern object LazyImportA(Action<string, dynamic> _obj, params object[] _args);
+    }
 }
